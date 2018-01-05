@@ -19,7 +19,7 @@ public class Event {
     }
 
     public String getFood() {
-        return "fail";
+        return this.food;
     }
 }
 
