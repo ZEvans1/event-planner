@@ -13,6 +13,10 @@ public class Event {
         this.entertainment = entertainment;
 
     }
+
+    public int getGuests() {
+        return 0;
+    }
 }
 
 
