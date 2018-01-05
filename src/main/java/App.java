@@ -1,3 +1,4 @@
+import models.Coupon;
 import models.Event;
 
 import java.io.BufferedReader;
@@ -38,6 +39,13 @@ public class App {
                         if (userGuestNumber > 100) {
                             System.out.println("Your guest list is over 100! You qualify for a coupon. Please type 'big group' to receive $200 off your total!");
                             String couponInput = bufferedReader.readLine();
+                            if (couponInput.equals("big group")) {
+                                Coupon newCoupon = new Coupon(preCoupon);
+                                System.out.println("New total: " + newCoupon.getCouponOne());
+                            } else {
+                                System.out.print("Input not recognized");
+                            }
+
                         } else {
 
                         }

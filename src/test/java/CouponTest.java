@@ -7,6 +7,6 @@ public class CouponTest {
     @Test
     public void newCoupon() {
         Coupon testCoupon = new Coupon(1000);
-        assertEquals(1000, testCoupon.getPreCoupon());
+        assertEquals(900, testCoupon.getCouponOne());
     }
 }

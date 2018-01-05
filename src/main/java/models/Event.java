@@ -47,18 +47,18 @@ public class Event {
     }
 
     public int getEventCost() {
-        this.eventCost = choiceValues.get(this.food) + choiceValues.get(this.drinks) + choiceValues.get(this.entertainment);
+        eventCost = choiceValues.get(this.food) + choiceValues.get(this.drinks) + choiceValues.get(this.entertainment);
 
         if (this.guests >= 100) {
-            this.eventCost = this.eventCost + 500;
+            eventCost = eventCost + 500;
         } else if (this.guests < 100 && this.guests >= 50) {
-            this.eventCost = this.eventCost + 300;
+            eventCost = eventCost + 300;
         } else if (this.guests < 50 && this.guests > 0) {
-            this.eventCost = this.eventCost + 100;
+            eventCost = eventCost + 100;
         } else {
-            this.eventCost = this.eventCost;
+            eventCost = eventCost;
         }
-        return this.eventCost;
+        return eventCost;
     }
 
 }

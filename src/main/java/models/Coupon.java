@@ -8,7 +8,7 @@ public class Coupon {
 
     }
 
-    public int getPreCoupon() {
-        return this.preCoupon;
+    public int getCouponOne() {
+        return this.preCoupon - 200;
     }
 }
