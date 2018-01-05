@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 public class App {
     public static void main(String[] args) {
         boolean running = true;
-        System.out.println("Welcome to our event scheduler. Type 'start' to begin registering your event. Type 'end' at any time to cancel registration.");
+        System.out.println("Welcome to our event scheduler. Type 'new event' to create a new event upon application beginning, or after your event total is displayed. Type 'end' after creating an event to stop application.");
 
         while(running) {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
@@ -16,14 +16,14 @@ public class App {
             try {
                 String programChoice = bufferedReader.readLine();
 
-                if (programChoice.equals("start")) {
+                if (programChoice.equals("new event")) {
                     System.out.println("How many people will be attending your event?");
                     int userGuestNumber = Integer.parseInt(bufferedReader.readLine());
                     System.out.println("Would you like us to provide food? (Please type: 'dinner' , 'snacks' , or 'no food)");
                     String userFood = bufferedReader.readLine();
                     System.out.println("What type of beverages would you like for the event? (Please type: 'full bar' , 'beer and wine' , or 'no drinks')");
                     String userDrinks = bufferedReader.readLine();
-                    System.out.println("We offer entertainment as well. (Please type: 'full band' , 'DJ' , or 'none')");
+                    System.out.println("We offer entertainment as well. (Please type: 'live band' , 'DJ' , or 'none')");
                     String userEntertainment = bufferedReader.readLine();
                     Event userEvent = new Event(userGuestNumber, userFood, userDrinks, userEntertainment);
                     int preCoupon = userEvent.getEventCost();
@@ -34,6 +34,7 @@ public class App {
                     System.out.println("Beverage option: " + userEvent.getDrinks());
                     System.out.println("Entertainment: " + userEvent.getEntertainment());
                     System.out.println("Total cost: $" + preCoupon);
+                    System.out.println("Type 'new event' for another event or 'end' after applying eligible coupon(s)");
                     System.out.println("----------------------");
 
                         if (userGuestNumber > 100) {
