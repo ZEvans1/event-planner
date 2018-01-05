@@ -48,6 +48,16 @@ public class Event {
 
     public int getEventCost() {
         eventCost = choiceValues.get(this.food) + choiceValues.get(this.drinks) + choiceValues.get(this.entertainment);
+
+        if (this.guests >= 100) {
+            eventCost = eventCost + 500;
+        } else if (this.guests < 100 && this.guests >= 50) {
+            eventCost = eventCost + 300;
+        } else if (this.guests < 50 && this.guests > 0) {
+            eventCost = eventCost + 100;
+        } else {
+            eventCost = eventCost;
+        }
         return eventCost;
     }
 }

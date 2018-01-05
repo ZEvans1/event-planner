@@ -38,7 +38,7 @@ public class EventTest {
 
     @Test
     public void newEvent_getEventCost_150() {
-        Event testEvent = new Event(100, "dinner", "full bar", "live band");
-        assertEquals(900, testEvent.getEventCost());
+        Event testEvent = new Event(50, "dinner", "full bar", "live band");
+        assertEquals(1200, testEvent.getEventCost());
     }
 }
