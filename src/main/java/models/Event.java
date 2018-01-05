@@ -15,7 +15,7 @@ public class Event {
     }
 
     public int getGuests() {
-        return 0;
+        return this.guests;
     }
 }
 
