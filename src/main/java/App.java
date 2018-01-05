@@ -41,7 +41,8 @@ public class App {
                             String couponInput = bufferedReader.readLine();
                             if (couponInput.equals("big group")) {
                                 Coupon newCoupon = new Coupon(preCoupon);
-                                System.out.println("New total: " + newCoupon.getCouponOne());
+                                System.out.println("New total: $" + newCoupon.getCouponOne());
+                                preCoupon = newCoupon.getCouponOne();
                             } else {
                                 System.out.print("Input not recognized");
                             }
@@ -53,26 +54,23 @@ public class App {
                         if (userFood.equals("dinner") && userDrinks.equals("full bar")) {
                                 System.out.println("Your food and drink selection makes you eligible for a discount. Please type 'full course' to receive $100 off your total!");
                                 String couponInputTwo = bufferedReader.readLine();
+                                if (couponInputTwo.equals("full course")) {
+                                    Coupon newCoupon = new Coupon(preCoupon);
+                                    System.out.println("New total: $" + newCoupon.getCouponTwo());
                             } else {
+                                    System.out.println("Input not recognized");
+                                }
 
                         }
-
                 } else if (programChoice.equals("end")) {
                     running = false;
                 } else {
                     System.out.println("Input not recognized.");
                 }
-
-
             }
-
             catch (IOException e) {
                 e.printStackTrace();
             }
         }
-
-
-
-
     }
 }
