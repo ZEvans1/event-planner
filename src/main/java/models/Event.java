@@ -23,7 +23,7 @@ public class Event {
     }
 
     public String getDrinks() {
-        return "none";
+        return this.drinks;
     }
 }
 
