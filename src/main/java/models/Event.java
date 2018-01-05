@@ -17,6 +17,10 @@ public class Event {
     public int getGuests() {
         return this.guests;
     }
+
+    public String getFood() {
+        return "fail";
+    }
 }
 
 
