@@ -11,4 +11,8 @@ public class Coupon {
     public int getCouponOne() {
         return this.preCoupon - 200;
     }
+
+    public int getCouponTwo() {
+        return 0;
+    }
 }
