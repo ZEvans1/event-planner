@@ -13,6 +13,6 @@ public class Coupon {
     }
 
     public int getCouponTwo() {
-        return 0;
+        return this.preCoupon - 100;
     }
 }
