@@ -25,7 +25,7 @@ public class Event {
         choiceValues.put("no drinks", 0);
         choiceValues.put("live band", 500);
         choiceValues.put("DJ", 100);
-        choiceValues.put("no entertainment", 0);
+        choiceValues.put("none", 0);
 
 
     }
