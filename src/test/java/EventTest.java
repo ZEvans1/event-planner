@@ -42,9 +42,9 @@ public class EventTest {
         assertEquals(1200, testEvent.getEventCost());
     }
 
-    @Test
-    public void newEvent_getCouponCost_costminus100() {
-        Event testEvent = new Event(50, "dinner", "full bar", "live band");
-        assertEquals(1100, testEvent.getCouponOneReduction());
-    }
+//    @Test
+//    public void newEvent_getCouponCost_costminus100() {
+//        Event testEvent = new Event(50, "dinner", "full bar", "live band");
+//        assertEquals(1100, testEvent.getCouponOneReduction());
+//    }
 }

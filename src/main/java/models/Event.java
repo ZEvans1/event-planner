@@ -10,7 +10,6 @@ public class Event {
     private String entertainment;
     private Map<String, Integer> choiceValues;
     private int eventCost;
-    private int reductionCost;
 
     public Event(int guests, String food, String drinks, String entertainment) {
         this.guests = guests;
